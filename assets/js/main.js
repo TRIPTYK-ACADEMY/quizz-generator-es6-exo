@@ -46,7 +46,6 @@ const generateForm = () => {
 
   for (const q of questions) {
     let element;
-    console.log(q.type);
     switch (q.type) {
       case 'direct':
         element = directQuestion(q);

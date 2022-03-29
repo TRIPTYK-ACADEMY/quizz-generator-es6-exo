@@ -16,8 +16,6 @@ export default class History {
     localStorage.setItem('history', JSON.stringify([...histories, history]));
   }
 
-  removeHistory(history) {}
-
   clearHistories() {
     localStorage.removeItem('history');
   }
