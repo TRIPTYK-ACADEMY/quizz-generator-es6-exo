@@ -1,3 +1,5 @@
+import History from './history';
+
 const questions = [
   {
     question: 'Quel est le surnom du tractopelle au Québec ?',
@@ -33,6 +35,7 @@ const questions = [
   },
 ];
 
+const history = new History();
 const main = document.querySelector('main');
 
 const generateForm = () => {
@@ -90,6 +93,10 @@ function submitForm(e) {
     }
   }
   showResult(result);
+  history.setHistory({
+    date: new Date(),
+    result: `${result}/${questions.length}`,
+  });
 }
 
 const directQuestion = (question) => {
